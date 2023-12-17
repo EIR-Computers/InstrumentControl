@@ -1,6 +1,5 @@
 import pyvisa
 import time
-#123
 import string
 
 #CHANGE FREQ OF INSTRUMENT
