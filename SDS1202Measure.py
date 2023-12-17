@@ -39,13 +39,13 @@ dso.write(':HORIzontal:SCALe ' + HorModes[HORmode])
 tic = time.perf_counter()
 for count in range (1000):
     #calculate duration
-    dur=((1/freq[count])*5*1000/cells)
+#    dur=((1/freq[count])*5*1000/cells)
     #print(str(dur))
 
-    for i in range(len(hscale)-1):
-        if dur >= hscale[i] and dur < hscale[i+1]:
-            HORmode=i+1
-    dso.write(':HORIzontal:SCALe ' + HorModes[HORmode])
+#    for i in range(len(hscale)-1):
+#        if dur >= hscale[i] and dur < hscale[i+1]:
+#            HORmode=i+1
+#    dso.write(':HORIzontal:SCALe ' + HorModes[HORmode])
 
     #GENERATE SOUND
     #winsound.Beep(freq[count], 1000)
