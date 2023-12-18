@@ -76,7 +76,9 @@ rm = pyvisa.ResourceManager()
 file = open('measure2.txt', 'w')
 
 # creating obj DSO
-dso = rm.open_resource('USB0::0x5345::0x1234::SERIAL::INSTR')
+dso = rm.open_resource('USB0::0x5345::0x1234::SERIAL::INSTR') # OWON SDS1202
+#dso = rm.open_resource('USB0::0xF4EC::0xEE3A::NEU00003130499::INSTR') # AKIP 4115
+
 
 print("Query ID number:")
 # test conn
@@ -85,8 +87,8 @@ print(dso.query('*IDN?'))
 time.sleep(1)
 
 # initial setup vert scale
-dso.write(':CH1:SCALe 20mV')  # Attenuation is 10x
-# dso.write(':CH1:SCALe 200mV') #Attenuation is 10x
+#dso.write(':CH1:SCALe 20mV')  # Attenuation is 10x
+dso.write(':CH1:SCALe 200mV') #Attenuation is 10x
 
 
 frequency = float(input("ENTER START FREQ in HZ: "))
