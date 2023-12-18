@@ -87,8 +87,8 @@ print(dso.query('*IDN?'))
 time.sleep(1)
 
 # initial setup vert scale
-#dso.write(':CH1:SCALe 20mV')  # Attenuation is 10x
-dso.write(':CH1:SCALe 200mV') #Attenuation is 10x
+dso.write(':CH1:SCALe 20mV')  # Attenuation is 10x
+#dso.write(':CH1:SCALe 200mV') #Attenuation is 10x
 
 
 frequency = float(input("ENTER START FREQ in HZ: "))
